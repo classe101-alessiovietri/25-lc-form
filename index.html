@@ -6,24 +6,207 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Template HTML CSS Base</title>
 
+        <!-- BS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
 
-        <header>
-            HEADER
-        </header>
-
         <main>
             <div class="container">
-                MAIN
+
+                <section>
+                    <h2>
+                        TEST
+                    </h2>
+                    
+                    <div>
+                        <input>
+                    </div>
+                    
+                    <div>
+                        <input
+                            type="text"
+                            maxlength="5">
+                    </div>
+                    
+                    <div>
+                        <input type="number" step="1" min="-4" max="8">
+                    </div>
+                    
+                    <div>
+                        <input type="color">
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox">
+                    </div>
+                    
+                    <div>
+                        <input type="radio">
+                    </div>
+                    
+                    <div>
+                        <input type="date">
+                    </div>
+                    
+                    <div>
+                        <input type="file">
+                    </div>
+                    
+                    <div>
+                        <input type="month">
+                    </div>
+                    
+                    <div>
+                        <input type="password">
+                    </div>
+                    
+                    <div>
+                        <input type="range">
+                    </div>
+                    
+                    <div>
+                        <input type="time">
+                    </div>
+                    
+                    <div>
+                        <input type="submit">
+                        <!-- || -->
+                        <button>Invia</button>
+
+                        <input type="button" value="NON SOTTOMETTE">
+                        <!-- || -->
+                        <button type="button">NON SOTTOMETTE</button>
+                    </div>
+
+                    <div>
+                        <label for="">
+                            Genere
+                        </label>
+                        <p>
+                            Seleziona il tuo genere:
+                        </p>
+                        <select name="scelta">
+                            <option value="m">Maschio</option>
+                            <option value="f">Femmina</option>
+                            <option value="p">Preferisco non rispondere</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <textarea name="name" rows="5" cols="10">Questa è una textarea</textarea>
+                    </div>
+                </section>
+
+                <hr>
+
+                <section>
+
+                    <form method="GET" action="">
+
+                        <div>
+                            <div>
+                                <label for="email">
+                                    Email*
+                                </label>
+                            </div>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                placeholder="Inserisci la tua email..."
+                                required>
+                        </div>
+
+                        <div>
+                            <div>
+                                <label>
+                                    Password*
+                                </label>
+                            </div>
+                            <input
+                                id="id-password"
+                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                                title="Minimo 8 caratteri, almeno una lettera e almeno un numero"
+                                name="name-password" type="password" placeholder="Inserisci la tua password..." required>
+                            <div id="passwordHelpBlock" class="form-text">
+                                Minimo 8 caratteri, almeno una lettera e almeno un numero
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <label>
+                                    Genere*
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="genere" id=""> Maschio
+                            </div>
+                            <div>
+                                <input type="radio" name="genere" id=""> Femmina
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="film-prefe[]" value="totoro"> Il mio vicino Totoro
+                            </div>
+                            <div>
+                                <input type="checkbox" name="film-prefe[]" value="pulp"> Pulp Fiction
+                            </div>
+                            <div>
+                                <input type="checkbox" name="film-prefe[]" value="lacrime"> Mi chiamo Sam
+                            </div>
+                            <div>
+                                <input type="checkbox" name="film-prefe[]" value="fantozzi"> Fantozzi il ritorno
+                            </div>
+                        </div>
+
+                        <div>
+                            <input id="id-termini" name="name-termini" type="checkbox" value="1" required>
+                            <label for="id-termini">
+                                Accetto termini e condizioni
+                            </label>
+                        </div>
+
+                        <div>
+                            <button>
+                                Registrati
+                            </button>
+                        </div>
+
+                    </form>
+
+                </section>
+
+                <hr>
+
+                <section class="mb-5 pb-5">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" disabled id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Default file input example</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </section>
+
             </div>
         </main>
-
-        <footer>
-            FOOTER
-        </footer>
         
     </body>
 </html>
